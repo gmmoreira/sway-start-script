@@ -1,8 +1,20 @@
-PACKAGE_NAME = sway-start-script
-RELEASE_DIR = ()
+GBP_DCH = gbp dch --ignore-branch \
+		--debian-branch=master \
+		--debian-tag='%(version)s' \
+		--upstream-tag='%(version)s' \
+		--git-author \
+		--auto
+default:
+	echo "NOP"
 
-deb-build:
-	dpkg-deb --build --root-owner-group $(RELEASE_DIR)
+snapshot:
+	$(GBP_DCH) --snapshot
+
+release:
+	$(GBP_DCH) --release
+
+package:
+	gbp buildpackage --git-ignore-new -us -uc
 
 .PHONY: clean
 
