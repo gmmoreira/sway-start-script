@@ -1,0 +1,14 @@
+Source: sway-start-script
+Section: unknown
+Priority: optional
+Maintainer: Guilherme Moreira <guilherme@gmmoreira.com>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.4.1
+Homepage: https://github.com/gmmoreira/sway-start-script
+
+Package: sway-start-script
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, bash
+Description: Sway GDM session with a start script
+ The start script will source the .swayrc file in your home directory, if it exists.
+ This allows you to customize in your sway session with custom environment variables and so on.
