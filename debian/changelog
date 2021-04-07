@@ -1,0 +1,6 @@
+sway-start-script (0.1.0) focal; urgency=medium
+
+  * Add base files
+  * Add WIP Makefile
+
+ -- Guilherme Moreira <guilherme@gmmoreira.com>  Wed, 07 Apr 2021 08:21:23 -0300
